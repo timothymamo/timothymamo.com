@@ -29,13 +29,6 @@
     </ul>
     {{ .TableOfContents }}
   </nav>
-  <nav id="content-mobile" class="d-xl-block docs-toc">
-    <ul class="nav toc-top">
-      <li><a href="#" id="back_to_top" class="docs-toc-title">Table of Contents</a></li>
-    </ul>
-    {{ .TableOfContents }}
-  </nav>
-  {{ end }}
 </main>
 {{ if (and (.Site.Params.Info.codeCopy) (findRE "<pre" .Content 1)) }}
     <script src="/js/copycode.js"></script>
