@@ -1,0 +1,61 @@
+baseurl = "https://timothymamo.com"
+languageCode = "en"
+title = "Timothy Mamo"
+theme = "kiss"
+copyright = "&copy; <a href=\"https://github.com/TimothyMamo\">Timothy Mamo</a> 2021"
+# disqusShortname = "shortname"
+googleAnalytics = "G-NFB4LGRMZS"
+Paginate = 5 # Number of posts per page
+enableRobotsTXT = true
+
+[params.rss] # Adding this tag enables RSS feed
+includeContent = true # Includes whole content in rss
+authorName = "Timothy Mamo" # Author full name
+authorEmail = "tim@timothymamo.com" # Author email
+
+[params.assets]
+customCSS = ["css/custom.css"]
+
+[params.info]
+# adsense = "" # Adsense ID (ID only, without ca-pub-)
+enableSocial = true # Adds OpenGraph and Twitter cards
+homeTitle = "Timothy Mamo" # Title for home page
+poweredby = true # Adds powered by hugo and kiss below Copyright
+related = true # Includes related articles at the bottom of the article
+codeCopy = true # Add copy button above code blocks
+taxonomiesCount = true # Add taxonomies count
+
+# [params.features]
+# disqusOnDemand = true  # Load Disqus comments on click
+
+[params.opengraph.twitter]
+page = "timothy_mamo" # Twitter Page username. If not set, params.social.twitter will be used.
+
+[params.social]
+twitter = "timothy_mamo"
+github = "TimothyMamo"
+email = "tim@timothymamo.com"
+linkedin = "timbomengineer"
+rss = "index.xml" # Add this to show RSS button in social.
+
+[params.social.config]
+platforms = ["github","twitter","email","linkedin", "rss"]
+
+
+# [params.matomoAnalytics]
+# siteID = 1
+# rootURL = "//matomo.example.com/"
+
+# [params.fathomAnalytics]
+# rootURL = "//fathom.example.com/"
+
+[taxonomies]
+tag ="tags"
+
+[blackfriday]
+hrefTargetBlank = true
+
+[markup.tableOfContents]
+  endLevel = 2
+  ordered = false
+  startLevel = 2
