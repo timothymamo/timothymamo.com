@@ -6449,12 +6449,12 @@ html {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
 .maincontainer {
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 0;
 }
 
@@ -6737,4 +6737,12 @@ ul.toc-top {
 .toc-top li a:hover {
   color: #2970db;
   text-decoration: none
+}
+
+#content-desktop {display: block;}
+#content-mobile {display: none;}
+
+@media screen and (max-width: 768px) {
+  #content-desktop {display: none;}
+  #content-mobile {display: block;}
 }

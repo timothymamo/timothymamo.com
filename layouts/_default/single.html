@@ -23,7 +23,13 @@
     {{ end}}
   </div>
   {{ if and (ne .Params.toc false) }}
-  <nav class="d-xl-block docs-toc">
+  <nav id="content-desktop" class="d-xl-block docs-toc">
+    <ul class="nav toc-top">
+      <li><a href="#" id="back_to_top" class="docs-toc-title">Table of Contents</a></li>
+    </ul>
+    {{ .TableOfContents }}
+  </nav>
+  <nav id="content-mobile" class="d-xl-block docs-toc">
     <ul class="nav toc-top">
       <li><a href="#" id="back_to_top" class="docs-toc-title">Table of Contents</a></li>
     </ul>

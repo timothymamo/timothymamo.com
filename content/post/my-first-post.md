@@ -13,7 +13,7 @@ But today is the day - **I'm seizing the moment!!**
 
 ## Background
 
-I've been working in this industry for a few years now, building cloud infrastructure and enabling platform engineering, and before that I worked as an automotive engineer for over 6 years. I've worked with some great (and not so great) people, and learnt a lot, but also had 
+I've been working in this industry for a few years now, building cloud infrastructure and enabling platform engineering, and before that I worked as an automotive engineer for over 6 years (more of me in the [about](/about) section). I've worked with some great (and not so great) people, and learnt a lot, but also had 
 I've seen a lot of parallels when creating a product, be it something physical like a hybrid vehicle or something a little more conceptual like an app or a website.
 
 ## Like a Virgin
