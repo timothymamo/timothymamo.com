@@ -1,1 +1,5 @@
-{}
+{
+  "dependencies": {
+    "@staticman/netlify-functions": "^1.7.0"
+  }
+}
