@@ -13,11 +13,12 @@
     {{ partial "adsense" . }}
     {{ end }}
     <div class="content">
-    <div style="float: right; margin-left: 2rem; margin-bottom: 0.5rem; background-color: #fafafa; padding: 1rem 1rem 1rem 1rem">
+      {{ if not (in .Title "About") }}
+      <div style="float: right; margin-left: 2rem; margin-bottom: 0.5rem; background-color: #fafafa; padding: 1rem 1rem 1rem 1rem">
         <p style="margin-right: 3em; margin-bottom: 0.5em"><strong>Table of Contents</strong></p>
           {{ .TableOfContents }}
-        </nav>
       </div>
+      {{ end }}
       {{ .Content }}
       {{ if .Site.Params.Info.related }}
       <div class="related">{{ partial "related" . }}</div>

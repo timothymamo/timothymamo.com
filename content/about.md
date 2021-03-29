@@ -4,6 +4,7 @@ linktitle: About
 menu: main
 title: About
 toc: false
+disable_comments: true
 ---
 
 Hi, I'm Tim. Originally from the small island of Malta, but am now living in the beautiful city of Haarlem in the Netherlands with my partner and 2 cats.
