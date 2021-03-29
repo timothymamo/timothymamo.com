@@ -13,6 +13,11 @@
     {{ partial "adsense" . }}
     {{ end }}
     <div class="content">
+    <div style="float: right; margin-left: 2rem; margin-bottom: 0.5rem; background-color: #fafafa; padding: 1rem 1rem 1rem 1rem">
+        <p style="margin-right: 3em; margin-bottom: 0.5em"><strong>Table of Contents</strong></p>
+          {{ .TableOfContents }}
+        </nav>
+      </div>
       {{ .Content }}
       {{ if .Site.Params.Info.related }}
       <div class="related">{{ partial "related" . }}</div>
@@ -22,9 +27,11 @@
     {{ partial "adsense" . }}
     {{ end}}
   </div>
+  {{ partial "comments.html" .}}
 </section>
 {{ if (and (.Site.Params.Info.codeCopy) (findRE "<pre" .Content 1)) }}
     <script src="/js/copycode.js"></script>
 {{ end }}
+<script type="text/javascript" src="/js/nested-comments.js"></script>
 {{ partial "disqus" . }}
 {{ partial "footer" . }}

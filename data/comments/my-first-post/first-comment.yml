@@ -1,0 +1,4 @@
+_id: !!python/unicode '1'
+comment: !!python/unicode 'Keep up the good work'
+date: !!python/unicode '2013-07-30 01:23:24'
+name: !!python/unicode 'John'
