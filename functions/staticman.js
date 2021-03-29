@@ -20,7 +20,7 @@ exports.handler = (event, context, callback) => {
         allowedFields: ["name", "comment", "reply_to"],
         branch: "master",
         commitMessage: "New comment by {fields.name} in {options.slug}",
-        filename: "entry{@timestamp}",
+        filename: "comment-{@timestamp}",
         format: "yaml",
         generatedFields: {
           date: {
