@@ -13,3 +13,6 @@
 
 [context.deploy-preview.environment]
   HUGO_VERSION = "0.82.0"
+
+[template.environment]
+  REPO = "TimothyMamo/timothymamo.com"
