@@ -4,7 +4,7 @@ title = "Timothy Mamo"
 theme = "kiss"
 copyright = "&copy; <a href=\"https://github.com/TimothyMamo\">Timothy Mamo</a> 2021"
 # disqusShortname = "shortname"
-googleAnalytics = "G-NFB4LGRMZS"
+googleAnalytics = "UA-193165029-1"
 Paginate = 5 # Number of posts per page
 enableRobotsTXT = true
 
