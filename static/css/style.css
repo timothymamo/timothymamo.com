@@ -6821,7 +6821,6 @@ textarea {
 .dialog {
    display: none;
    position: fixed;
-   background-color: rgb(247, 247, 247);
    padding-top: 20%;
    top: 0;
    left: 0;
