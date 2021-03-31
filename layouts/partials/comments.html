@@ -28,7 +28,7 @@
 			<div class="comment-message">
 				{{ .comment | markdownify }}
 			</div>
-			<div class="comment__reply">
+			<div class="comment_reply">
 		        <button id="{{ ._id }}" class="btn-info" href="#comment-form" onclick="changeValue('fields[reply_to]', '{{ ._id }}')">Reply to {{ .name }}</button>
             </div>
 		</div>

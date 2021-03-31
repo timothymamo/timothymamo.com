@@ -6759,19 +6759,19 @@ textarea {
    margin-bottom: 0;
    vertical-align: middle;
 }
-.comment__reply{
+.comment_reply{
   text-align: right;
   padding: 0.5rem 2rem;
 }
 .btn-info {
   font-size: 1rem;
 }
-.comment__reply button{
+.comment_reply button{
   background: none;
   color: black;
   border: #2077b2;
 }
-.comment__reply button:hover{
+.comment_reply button:hover{
   border: none;
   color: white;
   background: #2077b2;
