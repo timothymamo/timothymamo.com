@@ -29,8 +29,8 @@
 				{{ .comment | markdownify }}
 			</div>
 			<div class="comment_reply">
-		        <button id="{{ ._id }}" class="btn-info" href="#comment-form" onclick="changeValue('fields[reply_to]', '{{ ._id }}')">Reply to {{ .name }}</button>
-            </div>
+				<button id="{{ ._id }}" class="btn-info" href="#comment-form" onclick="changeValue('fields[reply_to]', '{{ ._id }}')">Reply to {{ .name }}</button>
+			</div>
 		</div>
 		{{ partial "comment-replies" (dict "entryId_parent" $postSlug "SiteDataComments_parent" $.Site.Data.comments "parentId" ._id "parentName" .name "context" .) }}
 
@@ -46,6 +46,7 @@
         <h3 class="prompt">Say something</h3>
 			{{ end }}
 			<input type="hidden" name="options[redirect]" value="{{ .Permalink }}#comment-submitted">
+			<input type="hidden" name="options[redirectError]" value="{{ .Permalink }}#comment-error">
 			<input type="hidden" name="options[slug]" value="{{ .File.BaseFileName }}">
 			<input type="hidden" name="options[origin]" value="{{ .Permalink }}">
  			<input type="hidden" name="options[parent]" value="{{ .Permalink }}">
@@ -59,6 +60,14 @@
 	<div id="comment-submitted" class="dialog">
 		<h3>Thank you!</h3>
 		<p>Your comment has been submitted and will be published once it has been approved. &#128522;</p>
+
+		<p><a href="#" class="btn btn-primary comment-buttons ok">OK</a></p>
+	</div>
+
+	<div id="comment-error" class="dialog">
+		<h3>Ahhhh!</h3>
+		<p>The internet trolls have not allowed you to submit your comment. &#128533; Please try agian.</p>
+		<p>If you still encouter this issue could you email  <a href="mailto:{{ .Site.Params.Social.email }}">Tim</a> about it.</p>
 
 		<p><a href="#" class="btn btn-primary comment-buttons ok">OK</a></p>
 	</div>

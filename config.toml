@@ -2,7 +2,7 @@ baseurl = "https://timothymamo.com"
 languageCode = "en"
 title = "Timothy Mamo"
 theme = "kiss"
-copyright = "&copy; <a href=\"https://github.com/TimothyMamo\">Timothy Mamo</a> 2021"
+copyright = "&copy; <a href=\"mailto:tim@timothymamo.com\">Timothy Mamo</a> 2021"
 # disqusShortname = "shortname"
 googleAnalytics = "UA-193165029-1"
 Paginate = 5 # Number of posts per page
