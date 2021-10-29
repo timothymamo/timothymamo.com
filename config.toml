@@ -39,7 +39,7 @@ linkedin = "timbomengineer"
 rss = "index.xml" # Add this to show RSS button in social.
 
 [params.social.config]
-platforms = ["github","twitter","email","linkedin", "rss"]
+platforms = ["github","twitter","email","linkedin","rss"]
 
 
 # [params.matomoAnalytics]
