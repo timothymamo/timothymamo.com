@@ -7,8 +7,6 @@ tags: [platform, layered design, infra]
 categories: [platform, layered design, infra]
 ---
 
-## Introduction
-
 I've been designing, creating and maintaining platforms for a few years now and I've learnt a fair amount on what works and what doesn't, and how best to take advantage of the infrastructure that can be created in the cloud. The cloud has enabled companies to innovate at amazing speeds facilitating growth, move faster and continuously improve, and be more reliable and secure. All of this is vital for them to succeed. But I've found out that this is only possibly when the underlying infrastructure and applications aiding this growth are distributed, immutable and ephemeral as much as possible. All of which has been made possible with the offerings of the likes of AWS, Azure, GCP and open source projects like kubernetes and more.
 
 Most of this has been through working with amazing people like [Benny Cornelissen](https://blog.bennycornelissen.nl/), [Sander Knape](https://sanderknape.com/), [Ian Miel](https://zwischenzugs.com/), but also through the talks and readings of people like [Kelly Shortridge](https://www.kellyshortridge.com/) and [Martin Fowler](https://martinfowler.com/). The following is a high level overview of how I think platform design should be structured in a layered way.
@@ -34,7 +32,7 @@ Following on from the objects, I also try to adhere to a set of generic design p
 
 ## Layered Platform Approach
 
-![Example Layered Platform](/Layerd_Platform.png)
+![Example Layered Platform](/Layerd_Platform.png#c)
 
 The various objectives and principles are all interlinked. Harmonization of environments as well as being on-demand not only enables accelerated productivity for my customers (the developers), but also helps with platform development and other use-cases, like upgrades and disaster recovery. By making it easy to create, update and destroy platforms with a `press of a button`, from generic infrastructure code, we can enable these use-cases.
 
@@ -58,17 +56,15 @@ When using a layered platform approach the advantages are:
 
 - Reduced ‘blast radius’ of changes. You’ll only affect the layer you’re actually changing.
 - Clear distinction between different lifecycles and logical groups. This makes it easier to make sense of the platform architecture without getting lost in inter-resource dependencies.
-- Reduces the posibility of introducing ‘incorrect’ inter-resource dependencies to a resource that has a shorter lifecycle.
-- Possibility to introduce more granular separation of concerns. This also makes it easier for high-maturity software teams to add self-managed infrastructure components in the platform while maintaining a proper separation of concerns.
+- Reduces the possibility of introducing ‘incorrect’ inter-resource dependencies to a resource that has a shorter lifecycle.
+- Possibility to introduce granular separation of concerns. This makes it easier for [stream-aligned teams](https://teamtopologies.com/key-concepts) to add self-managed infrastructure resources in the platform while maintaining proper separation of concerns and compliancy.
 - It becomes easier to move towards immutable and ephemeral infrastructure across the board, going layer by layer.
 
 However, there are also things to keep in mind:
 
 - For each resource you need to have a clear understanding of its lifecycle, ownership, and dependencies.
-- Inter-layer dependencies need to be clear, as you cannot generally reference attributes from resources in a different layer, or adds complexity to do so. Specific dependencies (e.g. EKS needs Subnet IDs which may be in a different layer) need to be explicitly specified. This adds some complexity.
-
-1. Monolithic: a single codebase run to update an environment variable in the EKS Cluster might redeploy all services or update a routing table in the VPC
-2. Layered: a single codebase run to update an environment variable in the EKS Cluster can never touch anything outside of that specific layer (like a routing table or service deployment, since they are in different layers)
+- Inter-layer dependencies need to be clear. Referencing attributes from resources in a different layer can be fairly complex. Specific dependencies (e.g. EKS needs Subnet IDs which may be in a different layer) need to be explicitly specified. This adds some complexity.
 
 ## Conclusion
 
+Creating a Layered platform in the cloud requires knowledge of the business needs, both internal and external. This is why there isn't a one size fits all solution. But having concrete Objectives and Principles that can be followed during this design process ensures that what you are building takes advantage of what the cloud brings to the table. Infrastructure that can be distributed, immutable and ephemeral whilst also empowering teams to deploy their own resources enabling fast delivery of customer requirements.
