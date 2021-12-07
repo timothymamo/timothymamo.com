@@ -1,5 +1,5 @@
 ---
-date: 2021-04-09
+date: 2021-12-07
 linktitle: Designing a Layered Platform in the Cloud
 menu: main
 title: Designing a Layered Platform in the Cloud
