@@ -6680,6 +6680,16 @@ div.subtitle.tags {
   font-size: 1.15rem;
 }
 
+@media screen and (max-width: 512px) {
+  #TableOfContents ul {
+    margin-top: 0.5em;
+    margin-left: 5em;
+    margin-right: 2em;
+    line-height: 1.8;
+    font-size: 1.15rem;
+  }
+}
+
 #TableOfContents a {
   color: #2077b2;
   text-decoration: none;
