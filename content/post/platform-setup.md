@@ -30,7 +30,20 @@ Following on from the objects, I also try to adhere to a set of generic design p
 - KISS: Keep things as simple as possible. There may be the need to use complex technologies to reach our objectives. If this is the case, the implementation needs to be as simple as possible.
 - Platform-unaware Applications / Application-unaware Platform: I want generic interfaces between application and platform. This allows the applications to be portable. The [12 factor app](https://12factor.net/) methodology can come in handy here. Similarly the platform need to be designed to be able to change overtime.
 - Engineering Complexity over Operational Complexity: At times complexity is unavoidable. If that's the case, operational workflows should always be easy. I'd rather spend a little more effort and time in engineering a good platform over something that is hard to operate.
-- Good over Fast: prefer to ship a solid and stable product over shipping faster at the cost of reliability. 
+- Good over Fast: prefer to ship a solid and stable product over shipping faster at the cost of reliability.
+
+## Immutable Resources
+
+By default, most resources created in the cloud are CRUD (Create, Read, Update, Delete). When building immutable infrastructure, the Update part disappears. As the (incremental) updates to resources are most likely to go wrong, and the hardest to test, there is a clear benefit in creating immutable infrastructure. 
+
+In an immutable setup, updating a resource means destroying the old one and creating a new one. This has its own set of challenges, but those are mainly on the engineering side, and not the operational one.
+
+The most prevalent challenges with regard to immutable infrastructure components are:
+  1. **_State_**: the resource either should be stateless, or its state should be decoupled so that one can replace the resource without losing state.
+  2. **_Dependencies_**: a resource can only depend on another resource if that resource has a longer lifecycle than itself. Breaking this rule will break changes.
+  3. **_Uptime_**: some resources need to exist at all times. An approach to immutable resource updates is to destroy the current resource then creating a new one. For resources that require a high level of uptime, this process should be reversed where resources are created before destroyed. Traffic is then routed to the newly created resource before the old resource is destroyed, similar to how k8s deals with pods in a `RollingUpdate`.
+
+Keep in mind that not all resources can be made immutable. Some resources have the sole purpose of containing state, which by definition makes them mutable. That is ok, since the lifecycle of the state and the lifecycle of the resource can be equal. Examples of resources that cannot simply be made immutable are buckets or DNS zones.
 
 ## Layered Platform Approach
 
@@ -43,7 +56,7 @@ The platform should consist of a loosely coupled structure where resources are g
 The idea here is that resources are grouped based on lifecycle and ownership, called layers. These layers need to take into account the following:
 
 - At what point should this resource start to exist?
-- At what point should this resource stop to exist?`
+- At what point should this resource stop to exist?
 - Who should be responsible for creating the resource?
 - Who should be responsible for managing the resource?
 - What are the inter-resource dependencies?
