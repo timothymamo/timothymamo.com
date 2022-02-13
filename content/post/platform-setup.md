@@ -43,7 +43,7 @@ The platform should consist of a loosely coupled structure where resources are g
 The idea here is that resources are grouped based on lifecycle and ownership, called layers. These layers need to take into account the following:
 
 - At what point should this resource start to exist?
-- At what point should this resource stop to exist?`
+- At what point should this resource stop to exist?
 - Who should be responsible for creating the resource?
 - Who should be responsible for managing the resource?
 - What are the inter-resource dependencies?
