@@ -81,7 +81,7 @@ modules
 
 The following [repo](https://github.com/TimothyMamo/structure-iac) has an example of how I would, start to, structure my Terraform code to create various environments, each having a GKE cluster with a managed Postgres CloudSQL database.
 
-> _N.B. Even though the repo has a `prd` environment example, the code is **NOT** production ready. There are a fair few improvements which I would want to implement before even considering the code production ready._
+> _Note: Even though the repo has a `prd` environment example, the code is **NOT** production ready. There are a fair few improvements which I would want to implement before even considering the code production ready._
 
 ## Conclusion
 
