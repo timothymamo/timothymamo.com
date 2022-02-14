@@ -35,7 +35,7 @@ In the root of an environment (`env_name`) directory there should be all the lay
 
 **Terraform State**
 
-Whenever a Terraform plan is run within each module folder, used to create the underlying environment, a `terraform.tfstate` file is created.
+Whenever a Terraform plan is run within each layer, used to create the underlying environment, a `terraform.tfstate` file is created.
 This is used to control and version the Terraform IaC. This should be stored in a remote bucket and locked as described in the [state documentation](https://www.terraform.io/language/state).
 
 ### Terraform Modules
