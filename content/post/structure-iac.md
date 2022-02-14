@@ -55,8 +55,6 @@ In the root of a `module_name` directory there should be a `README.md` file, and
 - **_variables.tf_**: define variables here.
 - **_versions.tf_**: define Terraform or provider versions here.
 
-> _Note: This is not a comprehensive list of files that can exist in the `env_name` and `module_name` directories. Examples of other files could be `dns.tf`, `iam.tf`, etc._
-
 The resulting IaC structure would end up having the following format:
 
 ```bash
@@ -76,6 +74,8 @@ modules
 ├──── variables.tf
 └──── versions.tf
 ```
+
+> _Note: This is not a comprehensive list of files that can exist in the `env_name` and `module_name` directories. Examples of other files could be `dns.tf`, `iam.tf`, etc._
 
 ## GCP Example
 
