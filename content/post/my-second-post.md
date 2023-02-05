@@ -9,7 +9,7 @@ categories: [blogging]
 
 ## Didn't Really Seize the Day
 
-Well, I've made it. I'm a statistic, one of 95% of blogs that got abandoned (according to the [New York Times](https://www.nytimes.com/2009/06/07/fashion/07blogs.html)). So I didn't quite [seize the day](/post/my-first-post). I could blame life getting in the way (started a new job with [Container Solutions](https://www.container-solutions.com/)), Corona (wait shouldn't that have made it easier as I'm stuck home more!!) or any other ridicules excuse. But in reality, I just didn't put my head down and commit to it properly. So I'm going to set myself some targets, plan accordingly and not be one of the 95% anymore!!!
+Well, I've made it. I'm a statistic, one of 95% of blogs that got abandoned (according to the [New York Times](https://www.nytimes.com/2009/06/07/fashion/07blogs.html)). So I didn't quite [seize the day](/post/my-first-post). I could blame life getting in the way, Corona (wait shouldn't that have made it easier as I'm stuck home more!!) or any other ridicules excuse. But in reality, I just didn't put my head down and commit to it properly. So I'm going to set myself some targets, plan accordingly and not be one of the 95% anymore!!!
 
 ## Things to Come
 

@@ -35,7 +35,7 @@ enableRobotsTXT = true
   twitter = "timothy_mamo"
   github = "TimothyMamo"
   email = "tim@timothymamo.com"
-  linkedin = "timbomengineer"
+  linkedin = "timothymamo"
   rss = "index.xml" # Add this to show RSS button in social.
 
 [params.social.config]

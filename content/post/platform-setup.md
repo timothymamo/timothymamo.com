@@ -7,7 +7,7 @@ tags: [platform, layered design, infra]
 categories: [platform, layered design, infra]
 ---
 
-I've been designing, creating and maintaining platforms for a few years now. I've learnt a fair amount on what works and what doesn't and how best to take advantage of infrastructure that you can create in the cloud. Most of this was due to working with amazing people at my previous job ([Skyworkz](https://skyworkz.nl)) and at my current job ([Container Solutions](https://www.container-solutions.com)). But also through the talks and readings of people like [Kelly Shortridge](https://www.kellyshortridge.com/) and [Martin Fowler](https://martinfowler.com/).
+I've been designing, creating and maintaining platforms for a few years now. I've learnt a fair amount on what works and what doesn't and how best to take advantage of infrastructure that you can create in the cloud. Most of this was due to working with amazing people at my previous job at ([Skyworkz](https://skyworkz.nl)). But also through the talks and readings of people like [Kelly Shortridge](https://www.kellyshortridge.com/) and [Martin Fowler](https://martinfowler.com/).
 
 The cloud has enabled companies to innovate at amazing speeds, by facilitating growth, deploying faster and continuously improving. All of this whilst also being more reliable and secure. This is vital for them to succeed. But I've found that this is only possible when the underlying infrastructure and applications aiding this growth are distributed, immutable and ephemeral as much as possible. This has been made possible with the offerings from cloud providers (AWS, Azure, GCP) and open source projects like kubernetes and more.
 
